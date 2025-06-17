@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SETA | PORTFOLIO</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        darkMode: 'class',
+        theme: {
+        extend: {
+            colors: {
+                primary: '#b191f0',
+                softPurple: '#ece4ff',
+                softPurpleGlass: 'rgba(236,228,255,0.85)',
+                darkGlass: 'rgba(24,24,37,0.6)',
+                buttonLight: '#a983f2',
+                buttonDark: '#7b5bb0',
+            },
+            fontFamily: {
+                heading: ['"Josefin Sans"', 'sans-serif'],
+                body: ['Quicksand', 'sans-serif'],
+            },
+        },
+        },
+    }
+    </script>
+  </head>
+
+  <body class="bg-lightBg text-darkText dark:bg-[#1a1a1f] dark:text-gray-200 font-body">
+
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 transition-transform duration-500 ease-in-out
+        backdrop-blur-md bg-softPurpleGlass dark:bg-darkGlass
+        border-b border-purple-300 dark:border-purple-800
+        shadow-md dark:shadow-purple-900/20 rounded-b-xl">
+    
+    <div class="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-20">
+
+        <!-- Logo -->
+        <div class="text-primary font-heading text-3xl tracking-wide">
+            <a href="#" class="text-gray-900 dark:text-white">Seta<span class="text-gray-700 dark:text-purple-300">Pamungkas</span></a>
+        </div>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center space-x-8 font-body text-base text-gray-800 dark:text-gray-200">
+        <a href="#" class="hover:text-primary transition">Home</a>
+        <a href="#projects" class="hover:text-primary transition">Projects</a>
+        <a href="#about" class="hover:text-primary transition lang-en">About</a>
+        <a href="#contact" class="hover:text-primary transition lang-en">Contact</a>
+        <a href="#about" class="hover:text-primary transition lang-id hidden">Tentang</a>
+        <a href="#contact" class="hover:text-primary transition lang-id hidden">Hubungi</a>
+        <!-- Theme Toggle -->
+        <button id="themeToggle" class="hover:text-primary transition" title="Toggle Theme">🌙</button>
+        <button id="langToggle" class="hover:text-primary transition">
+         English
+        </button>
+        </nav>
+
+        <!-- Mobile Button -->
+        <div class="md:hidden">
+        <button id="menuBtn" class="text-gray-700 dark:text-gray-200 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+        </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden hidden px-6 pb-4 font-body 
+        bg-softPurple dark:bg-darkGlass backdrop-blur-md
+        shadow-md dark:shadow-purple-800/20 rounded-b-xl">
+        
+        <a href="#" class="block py-2 text-gray-700 dark:text-gray-200 hover:text-primary">Home</a>
+        <a href="#projects" class="block py-2 text-gray-700 dark:text-gray-200 hover:text-primary">Projects</a>
+        <a href="#about" class="block py-2 text-gray-700 dark:text-gray-200 hover:text-primary">About</a>
+        <a href="#contact" class="block py-2 text-gray-700 dark:text-gray-200 hover:text-primary">Contact</a>
+        <!-- Theme Toggle for mobile -->
+        <button id="themeToggleMobile" class="block py-2 text-gray-700 dark:text-gray-200 hover:text-primary" title="Toggle Theme">
+        🌙 Theme
+        </button>
+        <button id="langToggle" class="block py-2 text-gray-700 dark:text-gray-200 hover:text-primary">
+         English
+        </button>
+    </div>
+    </header>
+
+    <!-- Landing Section -->
+    <section id="landing" class="relative bg-white dark:bg-zinc-900">
+    <!-- Swiper container -->
+    <div class="swiper mySwiper h-[60vh]">
+        <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide relative">
+            <img src="assets/images/testbg.jpg" class="w-full h-full object-cover" alt="Slide 1">
+            <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-start px-8 md:px-16 text-white">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4">Welcome to My Creative Universe</h2>
+            <p class="text-lg md:text-xl mb-6">Discover handcrafted visuals, immersive games, and web experiences.</p>
+            <a href="#projects"
+                class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-lg transition">
+                Watch More
+            </a>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide relative">
+            <img src="assets/images/testbg.jpg" class="w-full h-full object-cover" alt="Slide 2">
+            <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-start px-8 md:px-16 text-white">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4">Stylized Games & Worldbuilding</h2>
+            <p class="text-lg md:text-xl">Crafted with imagination, shaped with experience.</p>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide relative">
+            <img src="assets/images/testbg.jpg" class="w-full h-full object-cover" alt="Slide 3">
+            <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-start px-8 md:px-16 text-white">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4">Aesthetic-Driven 3D Art</h2>
+            <p class="text-lg md:text-xl">Textures, forms, and vibes that speak style.</p>
+            </div>
+        </div>
+        </div>
+
+        <!-- Swiper pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white dark:bg-zinc-900">
+        <div class="max-w-6xl mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-10 items-center">
+            
+            <!-- Profile Photo -->
+            <div class="w-80 p-2 rounded-2xl backdrop-blur-md bg-white/20 shadow-xl transition-transform duration-300 hover:scale-105">
+                <img src="assets/images/setaphoto.png" alt="Seta Murdha Pamungkas"
+                    class="w-full h-auto object-cover rounded-xl" />
+            </div>
+
+            <!-- About Content -->
+            <div>
+                <h2 class="text-3xl font-heading font-bold text-gray-800 dark:text-white mb-2">
+                    Seta Murdha Pamungkas
+                </h2>
+                <p class="text-lg text-gray-700 dark:text-gray-300 mb-4 lang-en">
+                    I'm a creative explorer blending gameplay and visuals to bring immersive experiences to life.
+                    With a passion for stylized aesthetics and smart design, I love building worlds that feel both grounded and surreal.
+                    Whether it's games, art, or web, I aim to craft with purpose and personality.
+                </p>
+
+                <p class="text-lg text-gray-700 dark:text-gray-300 mb-4 lang-id hidden">
+                    Saya seorang penjelajah kreatif yang menggabungkan gameplay dan visual untuk menghadirkan pengalaman imersif yang hidup.
+                    Dengan hasrat terhadap estetika bergaya dan desain yang cerdas, saya senang membangun dunia yang terasa nyata sekaligus surealis.
+                    Baik itu game, seni, atau web, saya selalu berusaha menciptakan karya yang bermakna dan penuh karakter.
+                </p>
+                
+                <!-- Specialization -->
+                <p class="text-purple-600 dark:text-purple-400 font-semibold text-md mb-6">
+                    Game Developer | 3D Artist | Web Designer
+                </p>
+
+                <!-- Software Mastery -->
+                <div>
+                    <h3 class="text-md text-gray-800 dark:text-gray-200 font-bold mb-2">Software Mastery</h3>
+                    <ul class="flex flex-wrap gap-3 text-sm text-gray-600 dark:text-gray-400">
+                    <li class="bg-gray-200 dark:bg-zinc-800 px-3 py-1 rounded-lg">Blender</li>
+                    <li class="bg-gray-200 dark:bg-zinc-800 px-3 py-1 rounded-lg">Substance 3D Painter</li>
+                    <li class="bg-gray-200 dark:bg-zinc-800 px-3 py-1 rounded-lg">Substance 3D Designer</li>
+                    <li class="bg-gray-200 dark:bg-zinc-800 px-3 py-1 rounded-lg">ZBrush</li>
+                    <li class="bg-gray-200 dark:bg-zinc-800 px-3 py-1 rounded-lg">Unity</li>
+                    <li class="bg-gray-200 dark:bg-zinc-800 px-3 py-1 rounded-lg">Unreal Engine</li>
+                    </ul>
+                </div>
+                <!-- Buttons -->
+                <div class="mt-6 flex flex-wrap gap-4">
+                <!-- Download CV Button -->
+                <a href="assets/cv/CV Baru.pdf" download target="_blank"
+                    class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-lg transition lang-en">
+                    Download CV
+                </a>
+
+                <a href="assets/cv/CV Baru.pdf" download target="_blank"
+                    class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-lg transition lang-id hidden">
+                    Unduh CV
+                </a>
+
+                <!-- Contact Me Button -->
+                <a href="mailto:murdhapamungkas@gmail.com"
+                    class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-lg transition lang-en">
+                    Contact Me
+                </a>
+
+                <a href="mailto:murdhapamungkas@gmail.com"
+                    class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-lg transition lang-id hidden">
+                    Hubungi Saya
+                </a>
+                </div>
+
+                <!-- Social Media Links -->
+                <div class="flex flex-wrap gap-4 mt-6">
+                <a href="https://www.instagram.com/mur_pamungkas/" target="_blank" class="text-purple-600 hover:text-purple-800 text-2xl transition">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://murdha-p.itch.io/" target="_blank" class="text-purple-600 hover:text-purple-800 text-2xl transition">
+                    <i class="fab fa-itch-io"></i>
+                </a>
+                <!-- <a href="https://tiktok.com/@yourusername" target="_blank" class="text-purple-600 hover:text-purple-800 text-2xl transition">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="https://youtube.com/@yourusername" target="_blank" class="text-purple-600 hover:text-purple-800 text-2xl transition">
+                    <i class="fab fa-youtube"></i>
+                </a> -->
+                <a href="https://maspamungkas.medium.com/" target="_blank" class="text-purple-600 hover:text-purple-800 text-2xl transition">
+                    <i class="fab fa-medium"></i>
+                </a>
+                <a href="http://murdha_p.artstation.com/" target="_blank" class="text-purple-600 hover:text-purple-800 text-2xl transition">
+                    <i class="fab fa-artstation"></i>
+                </a>
+                <a href="https://murup.itch.io/" target="_blank" class="text-purple-600 hover:text-purple-800 text-2xl transition">
+                    <i class="fas fa-store"></i>
+                </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Section -->
+    <section id="projects" class="py-20 bg-white dark:bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+
+            <!-- 🎮 Game Projects -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-heading font-bold text-gray-800 dark:text-white mb-6">🎮 Game Projects</h2>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <!-- Game Project Card -->
+                    <a href="https://example.com/game1" target="_blank" rel="noopener noreferrer"
+                    class="rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 bg-white dark:bg-zinc-800">
+                    <img src="assets/images/GigglesandGold.png" class="w-full h-48 object-cover" alt="Game Project">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Game Title 1</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-300">Short description of the game project.</p>
+                    </div>
+                    </a>
+                    <a href="https://example.com/game1" target="_blank" rel="noopener noreferrer"
+                    class="rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 bg-white dark:bg-zinc-800">
+                    <img src="assets/images/GigglesandGold.png" class="w-full h-48 object-cover" alt="Game Project">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Game Title 1</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-300">Short description of the game project.</p>
+                    </div>
+                    </a>
+                    <a href="https://example.com/game1" target="_blank" rel="noopener noreferrer"
+                    class="rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 bg-white dark:bg-zinc-800">
+                    <img src="assets/images/GigglesandGold.png" class="w-full h-48 object-cover" alt="Game Project">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Game Title 1</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-300">Short description of the game project.</p>
+                    </div>
+                    </a>
+                    <!-- Duplicate this card for more games -->
+                </div>
+
+                <div class="text-right mt-6">
+                <a href="https://murdha-p.itch.io/" target="_blank" rel="noopener noreferrer"
+                    class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-lg transition">
+                    Watch More
+                </a>
+            </div>  
+            </div>
+
+            <!-- 🎨 3D Art Projects -->
+            <div>
+            <h2 class="text-3xl font-heading font-bold text-gray-800 dark:text-white mb-6">🎨 3D Art Projects</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- 3D Art Card -->
+                <a href="https://example.com/art1" target="_blank" rel="noopener noreferrer"
+                class="rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 bg-white dark:bg-zinc-800">
+                <img src="assets/images/GigglesandGold.png" class="w-full h-48 object-cover" alt="3D Art Project">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-gray-800 dark:text-white">3D Art Title 1</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">Short description of the 3D artwork.</p>
+                </div>
+                </a>
+
+                <a href="https://example.com/art1" target="_blank" rel="noopener noreferrer"
+                class="rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 bg-white dark:bg-zinc-800">
+                <img src="assets/images/GigglesandGold.png" class="w-full h-48 object-cover" alt="3D Art Project">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-gray-800 dark:text-white">3D Art Title 1</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">Short description of the 3D artwork.</p>
+                </div>
+                </a>
+
+                <a href="https://example.com/art1" target="_blank" rel="noopener noreferrer"
+                class="rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 bg-white dark:bg-zinc-800">
+                <img src="assets/images/GigglesandGold.png" class="w-full h-48 object-cover" alt="3D Art Project">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-gray-800 dark:text-white">3D Art Title 1</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">Short description of the 3D artwork.</p>
+                </div>
+                </a>
+                <!-- Duplicate this card for more art -->
+            </div>
+
+            <!-- Watch More Button -->
+            <div class="text-right mt-6">
+                <a href="http://murdha_p.artstation.com/" target="_blank" rel="noopener noreferrer"
+                    class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-lg transition">
+                    Watch More
+                </a>
+            </div>  
+            </div>
+
+        </div>
+    </section>
+
+    <section id="shop" class="py-20 bg-white dark:bg-zinc-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+            <h2 class="text-3xl font-heading font-bold text-gray-800 dark:text-white mb-4">
+                🛍️ Digital Shop
+            </h2>
+            <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                <span class="block font-medium text-primary mb-1">Bring Your Worlds to Life.</span>
+                Explore a collection of handcrafted assets and tools designed to spark imagination —
+                from eerie game kits to stylized 3D art.
+            </p>
+            </div>
+
+            <!-- Placeholder for product cards -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+            <!-- Example Product Card -->
+            <a href="https://example.com/art1" target="_blank" rel="noopener noreferrer"
+                class="rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 bg-white dark:bg-zinc-800">
+                <img src="assets/images/GigglesandGold.png" class="w-full h-48 object-cover" alt="3D Art Project">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Stylized Graveyard Pack</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">A moody asset pack for stylized horror levels.</p>
+                </div>
+            </a>
+            <a href="https://example.com/art1" target="_blank" rel="noopener noreferrer"
+                class="rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 bg-white dark:bg-zinc-800">
+                <img src="assets/images/GigglesandGold.png" class="w-full h-48 object-cover" alt="3D Art Project">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Stylized Graveyard Pack</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">A moody asset pack for stylized horror levels.</p>
+                </div>
+            </a>
+            <a href="https://example.com/art1" target="_blank" rel="noopener noreferrer"
+                class="rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 bg-white dark:bg-zinc-800">
+                <img src="assets/images/GigglesandGold.png" class="w-full h-48 object-cover" alt="3D Art Project">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Stylized Graveyard Pack</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">A moody asset pack for stylized horror levels.</p>
+                </div>
+            </a>
+            
+            <!-- Repeat product cards as needed -->
+            </div>
+
+            <!-- Look Shop Button (matched style) -->
+            <div class="text-right">
+            <a href="https://murup.itch.io/" target="_blank" rel="noopener noreferrer"
+                class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-lg transition">
+                Look Shop
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="quote" class="py-16 bg-zinc-100 dark:bg-zinc-800">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <blockquote class="text-2xl md:text-3xl font-semibold italic text-gray-700 dark:text-gray-200">
+            “In the midst of winter, I found there was, within me, an invincible summer.”
+            </blockquote>
+            <cite class="block mt-4 text-gray-600 dark:text-gray-400">— Albert Camus</cite>
+        </div>
+    </section>
+
+    <section id="blog" class="py-20 bg-white dark:bg-zinc-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-4 font-heading">
+                📝 Blog & Journal
+            </h2>
+            <p class="text-lg text-gray-600 dark:text-gray-300">
+                Thoughts, devlogs, and reflections from the creative process.
+            </p>
+            </div>
+
+            <!-- Blog Cards -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Blog Post 1 -->
+            <a href="https://maspamungkas.medium.com/igdx-2024-a-wholesome-chaos-we-loved-c0d307797a7f" target="_blank" class="block bg-white dark:bg-zinc-800 shadow-md rounded-lg overflow-hidden transition-transform hover:scale-105 duration-300">
+                <img src="assets/images/igdxpic.png" alt="Blog Cover" class="w-full h-48 object-cover">
+                <div class="p-5">
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">IGDX 2024 – A Wholesome Chaos We Loved</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-300">Opportunity to showcase our games at IGDX 2024! 🎉</p>
+                </div>
+            </a>
+
+            <!-- Blog Post 2 -->
+            <a href="#" target="_blank" class="block bg-white dark:bg-zinc-800 shadow-md rounded-lg overflow-hidden transition-transform hover:scale-105 duration-300">
+                <img src="assets/images/caesarchiper.png" alt="Blog Cover" class="w-full h-48 object-cover">
+                <div class="p-5">
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Caesar Chiper sebagai Metode Penyembunyian Pesan</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-300">Pada kesempatan ini saya ingin sharing sedikit ilmu saya yaitu teknik enkripsi pesan menggunakan Caesar Chiper.</p>
+                </div>
+            </a>
+
+            <!-- Blog Post 3 -->
+            <a href="#" target="_blank" class="block bg-white dark:bg-zinc-800 shadow-md rounded-lg overflow-hidden transition-transform hover:scale-105 duration-300">
+                <img src="assets/images/pichiper.png" alt="Blog Cover" class="w-full h-48 object-cover">
+                <div class="p-5">
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Caesar Chiper dan π sebagai Teknik Penyembunyian Pesan</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-300">Pi (π) yang bernilai 3,141592.. ternyata dapat dikembangkan sebagai kunci dasar dalam teknik penyembunyian pesan.</p>
+                </div>
+            </a>
+            </div>
+            <div class="text-right mt-8">
+            <a href="https://maspamungkas.medium.com/" target="_blank" rel="noopener noreferrer"
+                class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-lg transition">
+                More Stories
+            </a>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-softPurple dark:bg-zinc-950 py-10">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+
+            <!-- Social Icons -->
+            <div class="flex justify-center space-x-6 mb-6 text-2xl">
+            <!-- Instagram -->
+            <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer"
+                class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <!-- Itch.io (fallback icon) -->
+            <a href="https://yourname.itch.io" target="_blank" rel="noopener noreferrer"
+                class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition">
+                <i class="fab fa-itch-io"></i>
+            </a>
+
+            <!-- <a href="https://tiktok.com/@yourusername" target="_blank" rel="noopener noreferrer"
+                class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition">
+                <i class="fab fa-tiktok"></i>
+            </a>
+
+            <a href="https://youtube.com/@yourchannel" target="_blank" rel="noopener noreferrer"
+                class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition">
+                <i class="fab fa-youtube"></i>
+            </a> -->
+
+            <a href="https://maspamungkas.medium.com/" target="_blank" rel="noopener noreferrer"
+                class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition">
+                    <i class="fab fa-medium"></i>
+            </a>
+            <a href="http://murdha_p.artstation.com/" target="_blank" rel="noopener noreferrer"
+                class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition">
+                    <i class="fab fa-artstation"></i>
+            </a>
+            <a href="https://murup.itch.io/" target="_blank" rel="noopener noreferrer"
+                class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition">
+                    <i class="fas fa-store"></i>
+            </a>
+            </div>
+
+            <!-- Contact Button -->
+            <div class="mb-4">
+            <a href="mailto:seta@email.com"
+                class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-lg transition">
+                Contact Me
+            </a>
+            </div>
+
+            <!-- Copyright -->
+            <p class="text-sm text-gray-600 dark:text-gray-400">
+            © 2025 Seta Murdha Pamungkas. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scroll To Top Button -->
+    <button id="scrollToTopBtn"
+    class="fixed bottom-6 right-6 z-50 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg transition-opacity duration-300 opacity-0">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+    const swiper = new Swiper('.mySwiper', {
+        loop: true,
+        pagination: {
+        el: '.swiper-pagination',
+        },
+        autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+        },
+    });
+    </script>
+
+
+
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const header = document.querySelector('header');
+
+        let lastScroll = 0;
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > lastScroll && currentScroll > 50) {
+            header.classList.add('-translate-y-full');
+            } else {
+            header.classList.remove('-translate-y-full');
+            }
+            lastScroll = currentScroll;
+        });
+        </script>
+        <script>
+            const themeToggle = document.getElementById('themeToggle');
+            const themeToggleMobile = document.getElementById('themeToggleMobile');
+
+            function setTheme(mode) {
+                if (mode === 'dark') {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                if (themeToggle) themeToggle.textContent = '☀️ Theme';
+                if (themeToggleMobile) themeToggleMobile.textContent = '☀️ Theme';
+                } else {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                if (themeToggle) themeToggle.textContent = '🌙 Theme';
+                if (themeToggleMobile) themeToggleMobile.textContent = '🌙 Theme';
+                }
+            }
+
+            // Load saved theme
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            setTheme(savedTheme);
+
+            // Toggle handler
+            [themeToggle, themeToggleMobile].forEach(btn => {
+                if (btn) {
+                btn.addEventListener('click', () => {
+                    const isDark = document.documentElement.classList.contains('dark');
+                    setTheme(isDark ? 'light' : 'dark');
+                });
+                }
+            });
+        </script>
+
+        <script>
+            const scrollBtn = document.getElementById('scrollToTopBtn');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                scrollBtn.classList.remove('opacity-0');
+                } else {
+                scrollBtn.classList.add('opacity-0');
+                }
+            });
+
+            scrollBtn.addEventListener('click', () => {
+                window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+                });
+            });
+
+              // Language toggle (works on both desktop + mobile)
+            const langToggles = [document.getElementById('langToggle'), document.getElementById('langToggleMobile')];
+            let currentLang = 'en';
+
+            langToggles.forEach(btn => {
+                btn.addEventListener('click', () => {
+                currentLang = currentLang === 'en' ? 'id' : 'en';
+                document.querySelectorAll('.lang-en').forEach(el => el.classList.toggle('hidden', currentLang !== 'en'));
+                document.querySelectorAll('.lang-id').forEach(el => el.classList.toggle('hidden', currentLang !== 'id'));
+                langToggles.forEach(b => b.textContent = currentLang === 'en' ? 'English' : 'Bahasa');
+                });
+            });
+        </script>
+        
+
+    
+  </body>
+</html>
